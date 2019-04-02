@@ -1,0 +1,29 @@
+
+
+
+body {
+  background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+#login .container #login-row #login-column #login-box {
+  margin-top: 120px;
+  max-width: 600px;
+  height: 320px;
+  border: 1px solid #9C9C9C;
+  background-color: #EAEAEA;
+}
+
+#login .container #login-row #login-column #login-box #login-form {
+  padding: 20px;
+}
+#login .container #login-row #login-column #login-box #login-form #register-link {
+  margin-top: -85px;
+}
+
+#login2 .container #login-row #login-column #login-box{
+	 background-color: #EAEAEA;
+	 margin-top: 120px;
+
+}
