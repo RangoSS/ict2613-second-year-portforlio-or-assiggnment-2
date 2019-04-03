@@ -4,10 +4,12 @@ include "connection.php";
 include "link.php";
 
 ?>
-<div class="inserts" style="margin-left: 65%;margin-top:-15%;border-style:solid;border-color: green;width: 30%;padding-left: 5%;height: 32%; ">
+<input type="submit" class="btn btn-success" name="btnBack" value="Back"/>
+<div class="inserts" style="margin-left: 30%;border-style:solid;border-color: green;width: 30%;padding-left: 5%;height: 32%; ">
   <h3>inset new information</h3>
   
     <form action="#" method="post">
+      
         <div class="row">
                 <div class="col-md-3">
                     <div class="form-group form-group-sm">
@@ -17,7 +19,7 @@ include "link.php";
                         <label for="lastname" class="control-label">Fees</label>
                         <input type="text" class="form-control widthMe" id="feess"  name="feess" placeholder="fees">
 
-                        <input type="button" class="btn btn-success" name="btninset" value="insert"/>
+                        <input type="submit" class="btn btn-success" name="btninset" value="insert"/>
                     </div>
                 </div>
                 </div>
@@ -27,9 +29,11 @@ include "link.php";
 
 <?php
 
-if(isset($_POST['btninset'])){
+if(isset($_POST['Spercialitys'])){
    $Spercialitys=$_POST['Spercialitys'];
    $feess=$_POST['feess'];
+   $btnBack=$_POST['btnBack'];
+
 
    $sqlss="INSERT INTO doctor(specialty,fee)
                              VALUES('$Spercialitys','$feess')";
@@ -39,5 +43,5 @@ if(isset($_POST['btninset'])){
       header('location:task4.php');
       echo "one record is inserted";
     }
-   // while($row=mysqli_fetch_assoc($result)){
+   
 }

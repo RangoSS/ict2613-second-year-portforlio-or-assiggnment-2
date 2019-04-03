@@ -27,6 +27,7 @@ include "link.php";
       </select>
       <br>
       <input type="submit" class="btn btn-success" name="btn" value="submit"/>
+      <input type="submit" class="btn btn-success" name="btnd" value="Add new Doctor"/>
         
       
       
@@ -106,3 +107,9 @@ echo "</div>";
 </div>
 
 </div>
+<?php
+if(isset($_POST['btnd'])){
+  header("location:unsertHere.php");
+}
+
+?>
