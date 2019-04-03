@@ -1,46 +1,52 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+<?php
+/*if($_GET){
+    if(isset($_GET['insert'])){
+        insert();
+    }elseif(isset($_GET['select'])){
+        select();
+    }
+}
 
-<div id="errors" style="display:none;">
-	please enter you name and choose your wishes
-</div>
+    function select()
+    {
+       echo "The select function is called.";
+    }
+    function insert()
+    {
+       echo "The insert function is called.";
+    }
+*/
+?>.
 
-<form method="post">
-	<input type="text" name="array[]" id="array[]" />
-	<input type="text" name="array[]" id="array[]"  />
-	<input type="text" name="array[]" id="array[]" />
-	<input type="text" name="array[]" id="array[]" />
-	<input type="submit" id="asubmit" name="asubmit" onclick="checkEmty(event);" />
-</form>
+<!--
+<input type="submit" class="button" name="insert" value="insert" />
+<input type="submit" class="button" name="select" value="select" />
+-->
+===============================================
+
+
 
 <?php
+ if($_GET['button1']){fun1();}
+ if($_GET['button2']){fun2();}
 
-if (isset($_POST['asubmit'])){
-    
-
-    $checkhere=$_POST["array"];
-
-    if($checkhere==""){
-    	echo "enter name ";
-    }
-    else{
-
-	foreach($checkhere as $myarray){
-		echo $myarray."<br>";
-	}
-}
-}
+ function fun1()
+ {
+   echo "gjgjdfjdfjfdj";
+ }
+ function fun2()
+ {
+   echo "love you";
+ }
 ?>
 
-<!--<script type="text/javascript">
-	
-		function checkEmty(event){
-			event.preventDefault();
-     	var showMe=$('#array').val()=="";
-     
-       $("#errors").show();
-
-}
-</script>-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <button id="btnfun1" name="btnfun1" onClick='location.href="?button1=1"'>Update to 1</button>
+    <button id="btnfun2" name="btnfun2" onClick='location.href="?button2=2"'>Update to 2</button>
+  </body>
+</html>

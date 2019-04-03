@@ -1,4 +1,8 @@
-
+<?php
+include "styless.php";
+include "connection.php";
+include "link.php";
+?>
 <div style="margin-left: 40%;font-family: arial;">
 	<h1>TASK1</h1>
 <?php
