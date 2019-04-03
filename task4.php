@@ -106,24 +106,3 @@ echo "</div>";
 </div>
 
 </div>
-<div class="inserts" style="margin-left: 65%;margin-top:-15%;border-style:solid;border-color: green;width: 30%;padding-left: 5%;height: 32%; ">
-  <h3>inset new information</h3>
-  
-    <form action="#" method="post">
-        <div class="row">
-                <div class="col-md-3">
-                    <div class="form-group form-group-sm">
-                        <label for="firstname" class="control-label myedits">Sperciality</label>
-                        <input type="text" class="form-control widthMe" id="firstname" placeholder="sperciality">
-                        <label for="lastname" class="control-label">Fees</label>
-
-                        <input type="text" class="form-control widthMe" id="lastname" placeholder="fees">
-                        <input type="submit" class="btn btn-success" name="btninset" value="insert"/>
-                    </div>
-                </div>
-                </div>
-    </form>
-
-</div>
-
-<?php
