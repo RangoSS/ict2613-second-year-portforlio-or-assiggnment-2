@@ -69,7 +69,7 @@ include "link.php";
                 <td>$row[specialty]</td>
                 <td>$row[fee]</td>
                 
-                <td class='text-center'><a class='btn btn-info btn-xs' href='#'><span class='glyphicon glyphicon-edit'></span> Edit</a> <a href='#' class='btn btn-danger btn-xs'><span class='glyphicon glyphicon-remove'></span>Cancel</a></td>
+                <td class='text-center'><a class='btn btn-info btn-xs' href='#'><span class='glyphicon glyphicon-edit'></span> Update</a> <a href='#' class='btn btn-danger btn-xs'><span class='glyphicon glyphicon-remove'></span>Delete</a></td>
             </tr>";
             }
 echo "<div style='background-color:silver;'>";           
@@ -91,7 +91,7 @@ echo "</div>";
                 <td>$row[specialty]</td>
                 <td>$row[fee]</td>
                 
-                <td class='text-center'><a class='btn btn-info btn-xs' href='#'><span class='glyphicon glyphicon-edit'></span> Edit</a> <a href='#' class='btn btn-danger btn-xs'><span class='glyphicon glyphicon-remove'></span>Cancel</a></td>
+                <td class='text-center'><a class='btn btn-info btn-xs' href='#'><span class='glyphicon glyphicon-edit'></span> Update</a> <a name='del' href='task4.php?del=$row[practicenumber]' class='btn btn-danger btn-xs'><span class='glyphicon glyphicon-remove'></span>Delete</a></td>
             </tr>";
      
             }
@@ -112,4 +112,14 @@ if(isset($_POST['btnd'])){
   header("location:unsertHere.php");
 }
 
+
+if(isset($_GET['del'])){
+  $deleting=$_GET['del'];
+
+  $qer="DELETE from doctor WHERE practicenumber='$deleting'";
+  $results=mysqli_query($con,$qer);
+  if($results){
+    echo "row has been deleted";
+  }
+}
 ?>
