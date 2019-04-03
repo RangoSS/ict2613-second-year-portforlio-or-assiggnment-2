@@ -30,8 +30,26 @@ if (($i % $var1)==0 && !(($i % $var2)==0)){
 if (!(($i % $var1)==0) && ($i % $var2)==0){
 	print"[".$i."]";
 }
+}
+echo "<br>";
+/////////////////////////////////B////////////////////////////////////////
+$var1=3;
+$var2=2;
+for( $i=1; $i<=19; $i++ ){
 
+ if (($i % $var1)!==0 && ($i % $var2)!==0){
+ 	 print $i;
+ 	}
 
+if (($i % $var1)==0 && ($i % $var2)==0){
+	print "{".$i."}";
+}
+if (($i % $var1)==0 && !(($i % $var2)==0)){
+	print"{".$i."}";
+}
+if (!(($i % $var1)==0) && ($i % $var2)==0){
+	print"{".$i."}";
+}
 
 
 
@@ -76,8 +94,5 @@ return $number;
  }
  //here i return function with value of rate
  echo Ratings(1234567);
-?>
-
-
 ?>
 </div>
