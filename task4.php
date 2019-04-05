@@ -8,7 +8,7 @@ include "link.php";
 
 <div style="margin-left: 40%;font-family: arial;">
     <h1>TASK4</h1>
-    <h4 style="font-family: italic;color: blue;">make your wish for holidy in </h4>
+    
 </div>
 
 <div id="showMyBookings" style="border-style: solid;border-color: blue;height: auto;">
@@ -32,10 +32,14 @@ include "link.php";
       
       
     </div>
+     <br>
     <br>
+    <div style="height: 5%;background-color: red;margin-top: 55px;width: 50%;">
+      <p style="font-family: 'Times New Roman', Times, serif;padding-left: 60%;color: white;font-size: large;" >To Delete Double Click</p>
+    </div>
     </form>
   </div>
-       <br>
+      
     <div class="container">
     <div class="row col-md-6 col-md-offset-2 custyle">
     <table class="table table-striped custab">
@@ -69,7 +73,7 @@ include "link.php";
                 <td>$row[specialty]</td>
                 <td>$row[fee]</td>
                 
-                <td class='text-center'><a class='btn btn-info btn-xs' href='#'><span class='glyphicon glyphicon-edit'></span> Update</a> <a href='#' class='btn btn-danger btn-xs'><span class='glyphicon glyphicon-remove'></span>Delete</a></td>
+                <td class='text-center'><a class='btn btn-info btn-xs' href='updating.php?upd=$row[practicenumber]'><span class='glyphicon glyphicon-edit'></span> Update</a> <a href='task4.php?del=$row[practicenumber]' class='btn btn-danger btn-xs'><span class='glyphicon glyphicon-remove'></span>Delete</a></td>
             </tr>";
             }
 echo "<div style='background-color:silver;'>";           
@@ -91,7 +95,7 @@ echo "</div>";
                 <td>$row[specialty]</td>
                 <td>$row[fee]</td>
                 
-                <td class='text-center'><a class='btn btn-info btn-xs' href='task4.php?upd=$row[practicenumber]'><span class='glyphicon glyphicon-edit'></span> Update</a> <a name='del' href='task4.php?del=$row[practicenumber]' class='btn btn-danger btn-xs'><span class='glyphicon glyphicon-remove'></span>Delete</a></td>
+                <td class='text-center'><a class='btn btn-info btn-xs' href='updating.php?upd=$row[practicenumber]'><span class='glyphicon glyphicon-edit'></span> Update</a> <a name='del' href='task4.php?del=$row[practicenumber]' class='btn btn-danger btn-xs'><span class='glyphicon glyphicon-remove'></span>Delete</a></td>
             </tr>";
      
             }
@@ -108,10 +112,11 @@ echo "</div>";
 
 </div>
 <?php
+//////////////////////////go to insert page//////////////////////////////////
 if(isset($_POST['btnd'])){
   header("location:unsertHere.php");
 }
-
+//////////////delete/////////////////////////////////////////////////////////////
 
 if(isset($_GET['del'])){
   $deleting=$_GET['del'];
@@ -125,63 +130,7 @@ if(isset($_GET['del'])){
 
 
 
-//////////////////////////////////UPDATE INFORMATION//////////////////////////////////////
 
 
 
-if(isset($_GET['upd'])){
-    
-   $updates=$_GET['upd'];
-  // $Spercialitys=$_GET['Spercialitys'];
-   //$feess=$_GET['feess'];
-    
-   //////////////////select////
-   $sqlSelect="SELECT * FROM doctor where practicenumber='$updates'";
-     $resultSelect=mysqli_query($con,$sqlSelect);
-     while($row=mysqli_fetch_assoc($resultSelect)){
 
-      echo '<form method="post">
-       <label for="firstname" class="control-label myedits">Sperciality</label>
-                        <input type="text" class="form-control widthMe" id="Spercialitys" name="Spercialitys" value="'.$row[specialty].'">
-
-                        <label for="lastname" class="control-label">Fees</label>
-                        <input type="text" class="form-control widthMe" id="feess"  name="feess" value="'.$row[fee].'">
-
-                        <input type="submit" class="btn btn-success" name="btninset" value="insert"/></form>';
-     }
-      
-     //////////////////////////////////////////
-
-  /* $sqlss="UPDATE doctor(specialty,fee)
-                             SET('$Spercialitys','$feess')";
-    $result=mysqli_query($con,$sqlss);
-
-    if($result){
- 
- echo '    
-<div class="inserts" style="margin-left: 30%;border-style:solid;border-color: green;width: 30%;padding-left: 5%;height: 32%; ">
-  <h3>inset new information</h3>
-  
-    <form action="#" method="post">
-      
-        <div class="row">
-                <div class="col-md-3">
-                    <div class="form-group form-group-sm">
-                        <label for="firstname" class="control-label myedits">Sperciality</label>
-                        <input type="text" class="form-control widthMe" id="Spercialitys" name="Spercialitys" placeholder="sperciality">
-
-                        <label for="lastname" class="control-label">Fees</label>
-                        <input type="text" class="form-control widthMe" id="feess"  name="feess" placeholder="fees">
-
-                        <input type="submit" class="btn btn-success" name="btninset" value="insert"/>
-                    </div>
-                </div>
-                </div>
-    </form>
-
-</div>';
-*/
-
-}
-
-?>

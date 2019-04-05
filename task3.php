@@ -8,8 +8,7 @@ include "link.php";
 
 <div style="margin-left: 40%;font-family: arial;">
     <h1>TASK3</h1>
-    <h4 style="font-family: italic;color: blue;">make your wish for holidy in </h4>
-</div>
+    </div>
 
 <div id="showMyBookings" style="border-style: solid;border-color: blue;height: auto;">
 	<div class="form-group" id="myHostes" style="margin-left: 25%;padding-bottom: 10px;">

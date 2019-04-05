@@ -5,9 +5,11 @@ include "link.php";
 <div style="margin-left: 40%;font-family: arial;">
     <h1>TASK2</h1>
     <h4 style="font-family: italic;color: blue;">make your wish for holidy in </h4>
+    <p style="font-family: italic;color: purple;">you could choose many wish as you wish <p>
 </div>
 <!--your wishes -->
-<div class="container">
+<div class="container" style="margin-left: 35%;">
+
 <form method="post" style='background-color:silver;width: 50%;'>
      <label for="first_name" class="text-info">First Name:</label><br>
      <input type="text" name="array[]" id="first_name" class="form-control" style="width: 30%">

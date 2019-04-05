@@ -3,7 +3,7 @@ include "styless.php";
 include "connection.php";
 include "link.php";
 ?>
-<div style="margin-left: 40%;font-family: arial;">
+<div style="margin-left: 40%;font-family: arial;background-color: silver;width: 30%;">
 	<h1>TASK1</h1>
 <?php
 
